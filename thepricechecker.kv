@@ -1,0 +1,116 @@
+PriceChecker:
+#:import utils kivy.utils
+
+
+<PriceChecker@BoxLayout>:
+    orientation: "vertical"
+
+    BoxLayout:  
+        size_hint: 1, 0.8
+        spacing: "10dp"
+    
+        BoxLayout:
+            Label:
+                pos_hint: {"center_y": 0.4}
+                color: 1,1,1,1
+                text:"2.50"  
+                size_hint: .83, 1
+                font_size:"250dp"
+                font_name:"fonts/Lemonada-SemiBold.ttf"
+                #font_name:"fonts/ReadexPro-SemiBold.ttf"
+            BoxLayout:
+                size_hint: .17, 1
+                orientation:"vertical"
+
+
+                Label:
+                    color: 1,1,1,0
+                    size_hint: 1, .33 
+
+
+                BoxLayout:
+                    size_hint: 1, .33
+                    orientation:"vertical"
+                    Label:
+                        color: 1,1,1,1
+                        text: root.arText
+                        size_hint: 1, .2 
+                        font_name:"fonts/NotoSansArabic-VariableFont_wdth,wght.ttf"
+                        font_size: "40dp"
+                    Label:
+                        color: 1,1,1,1
+                        text: "Price"
+                        size_hint: 1, .2  
+                        font_size: "40dp"
+                    Label:
+                        color: 1,1,1,1
+                        text: "LYD"
+                        size_hint: 1, .2  
+                        font_size: "60dp"
+                        pos_hint:{"top":1}
+ 
+                Label:
+                    color: 1,1,1,0
+                    size_hint: 1, .33 
+ 
+ 
+        Image:
+            size_hint: .17, .8
+            source: "Images/2.png"
+            keep_ratio : False
+            allow_stretch: True
+        Image:
+            keep_ratio : False
+            allow_stretch: True
+            size_hint: .17, 1
+            source: "Images/1.png"
+
+      
+
+    
+    BoxLayout: 
+        padding:("20dp","20dp")
+        spacing: "20dp"
+        canvas.before:
+            Color:
+                rgb: utils.get_color_from_hex("#ffffff")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        color: 1,1,1,1  
+        size_hint: 1, 0.2
+        BoxLayout:
+            orientation:"vertical"
+            size_hint: .6, 1
+            Label:
+                size_hint: 1, .5
+                color: 0,0,0,1
+                text:root.itemDescriptionar
+                font_name:"fonts/NotoSansArabic-VariableFont_wdth,wght.ttf"
+                font_size:"40dp"
+                halign: 'left'
+                valign: 'middle'
+            Label:
+                size_hint: 1, .5
+                color: 0,0,0,1
+                text:root.itemDescriptionen
+                font_size:"40dp"
+        
+        BoxLayout:
+            orientation:"vertical"
+            size_hint: .2, 1
+            Label:
+                text: root.aruom
+                font_name:"fonts/NotoSansArabic-VariableFont_wdth,wght.ttf"
+                font_size:"40dp"
+                color: 0,0,0,1
+            Label:
+                text: root.enuom
+                font_size:"40dp"
+                color: 0,0,0,1
+        Image:
+            size_hint: .2, 1
+            source: "Images/3.png"
+
+
+
